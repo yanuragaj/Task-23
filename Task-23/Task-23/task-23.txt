@@ -1,0 +1,9 @@
+1. To launch Wordpress:
+kubectl run task23wordpress --image=wordpress:5.1.1-php7.3-apache
+
+2. To Expose deployment:
+kubectl expose pod task23wordpress --port=80 --type=NodePort
+
+3. To launch mysql:
+kubectl run task23mysqldb --image=mysql:5.7 --env=MYSQL_ROOT_PASSWORD=REDHAT --env=MYSQL_DATABASE=WPMYSQLDB
+--env=MYSQL_USER=ANURAG --env=MYSQL_PASSWORD=REDHAT
